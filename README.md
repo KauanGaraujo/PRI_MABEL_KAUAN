@@ -22,3 +22,15 @@
 
 # Cálculo da média
 ![img6](https://github.com/user-attachments/assets/3e1c0a44-f461-45a7-baa6-c9f2921da558)
+
+
+# Consumo maior e menor 
+![img7](https://github.com/user-attachments/assets/6b83b1cf-69e5-4f7c-903a-b1ac538b9819)
+
+
+# Média de consumo
+![img8](https://github.com/user-attachments/assets/d25a64ff-97a9-4503-836e-3c9b22ee47a3)
+
+# Impressão do resultado
+![img9](https://github.com/user-attachments/assets/cc546716-a1eb-408d-8cc7-6c4067c714a1)
+
