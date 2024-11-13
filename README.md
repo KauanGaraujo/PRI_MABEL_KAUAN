@@ -1,36 +1,48 @@
 # Implementação do programa em Python que realiza as operações solicitadas
 
 # Entrada de dados: quantidade de dias
-![img1](https://github.com/user-attachments/assets/4895224a-e2ff-4282-96c4-75687abda29f)
+n = int(input("Insira a quantidade de dias: "))
 
 
 # Inicialização de variáveis
-![img2](https://github.com/user-attachments/assets/3007f81b-fbff-42c2-87d3-77e5e03455aa)
-
+total_consumo = 0
+dias_meta_cumprida = 0
+maior_consumo = None
+menor_consumo = None
 
 # Consumo sustentável
-![img3](https://github.com/user-attachments/assets/ba76823f-45a7-46ea-8a49-bedb11aaf1af)
-
+meta = 150
 
 # Entrada e processamento dos dados de consumo diário
-![img4](https://github.com/user-attachments/assets/0a3598fe-aea0-4fd6-af54-10691582b822)
-
+for i in range(1, n + 1):
+    consumo = int(input(f"Insira o consumo do dia {i}: "))
 
 # Contagem dos dias 
-![img5](https://github.com/user-attachments/assets/a9af658b-8119-426f-bb40-5abbe1d18ce6)
-
+  if consumo >= meta:
+    dias_meta_cumprida += 1
 
 # Cálculo da média
-![img6](https://github.com/user-attachments/assets/3e1c0a44-f461-45a7-baa6-c9f2921da558)
+total_consumo += consumo
 
 
 # Consumo maior e menor 
-![img7](https://github.com/user-attachments/assets/6b83b1cf-69e5-4f7c-903a-b1ac538b9819)
+  if maior_consumo is None or consumo > maior_consumo:
+     maior_consumo = consumo
+  if menor_consumo is None or consumo < menor_consumo:
+     menor_consumo = consumo
 
 
 # Média de consumo
-![img8](https://github.com/user-attachments/assets/d25a64ff-97a9-4503-836e-3c9b22ee47a3)
+media_consumo = total_consumo / n
 
 # Impressão do resultado
-![img9](https://github.com/user-attachments/assets/cc546716-a1eb-408d-8cc7-6c4067c714a1)
+dias_nao_cumpriram_meta = n - dias_meta_cumprida
 
+if dias_meta_cumprida == n:
+    print("Parabéns! Todos os dias cumpriram a meta de consumo sustentável.")
+elif dias_meta_cumprida == 0:
+    print("Infelizmente, nenhum dia cumpriu a meta de consumo sustentável.")
+else:
+    print(f"{dias_meta_cumprida} dias cumpriram a meta e {dias_nao_cumpriram_meta} dias não cumpriram a meta.")
+
+print(f"A média de consumo foi de {media_consumo:.2f} kWh. O maior consumo foi de {maior_consumo} kWh e o menor consumo foi de {menor_consumo} kWh.")
